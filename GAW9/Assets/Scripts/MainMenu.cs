@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("IntroScene");
     }
     public void ExitGame()
     {
@@ -25,6 +25,6 @@ public class MainMenu : MonoBehaviour
     public void ReStartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene("Game");
     }
 }

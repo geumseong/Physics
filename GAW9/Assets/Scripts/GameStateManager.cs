@@ -9,6 +9,9 @@ public class GameStateManager : MonoBehaviour
     public GameObject PauseMenu;
     public bool paused = false;
 
+    public GameObject startCanvas;
+    bool gameStarted = false;
+
     public GameObject timerObject;
     public int timeLeft;
 
@@ -20,7 +23,8 @@ public class GameStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
+        paused = true;
         StartCoroutine(SpawnEnemy());
         StartCoroutine(StartTimer());
     }
@@ -28,8 +32,14 @@ public class GameStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
+        if(Input.GetKeyDown(KeyCode.Escape) && gameStarted == true) {
             OnPressESC();
+        }
+        if(Input.GetKeyDown(KeyCode.Space) && gameStarted == false) {
+            Time.timeScale = 1f;
+            gameStarted = true;
+            paused = false;
+            startCanvas.SetActive(false);
         }
     }
 
