@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BgScroll : MonoBehaviour
 {
-    float scrollSpeed = 2.5f;
+    float scrollSpeed = 0.75f;
     //float spawnOffset = 10.28f;
     float respawnAxis = 17.31f;
     float removeAxis = -13.49f;

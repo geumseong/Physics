@@ -19,10 +19,12 @@ public class MainMenu : MonoBehaviour
     }
     public void Back()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void ReStartGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Level0");
     }
 }

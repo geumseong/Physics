@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Bird : MonoBehaviour
 {
     Rigidbody2D rb;
-    float speed = 3f;
+    float speed = 3.5f;
 
     // Start is called before the first frame update
     void Start()
